@@ -26,14 +26,11 @@ body {
     /* The picture source is from 书童hiroco at the link (thanks shinji257!):
        https://www.pixiv.net/member_illust.php?mode=medium&illust_id=61734227
        */
-    background: #fff url(https://wawawa.s-ul.eu/hWCZReAV.png);
-
-    /* Just in case adjusting the position is necessary (x% y%)*/
-    background-position: 50% 0;
+    background: #fff url(https://lh6.googleusercontent.com/-b8sMuGsueWw/VCdhUhtADfI/AAAAAAAAAKg/T8c-uxeiyPw/w1920-h1080/301609.jpg);
 
     /* It is recommended to set the background-size width to match your monitor's or discord window's width plus 1px.
        If the background picture is blurry, please use a bigger sized background picture. */
-    background-size: 1921px auto;
+    background-size: cover;
 }
 
 .app, .connecting {
@@ -233,6 +230,7 @@ div.theme-dark.context-menu.item.item-subMenu{
 }
 
 .mention{
+	color: rgba(0, 160, 40, 1);
     background-color: rgba(179, 224, 255, 0.22);
 }
 
@@ -1619,8 +1617,12 @@ input:disabled{
     color: rgba(255, 255, 255, 0.9);
 }
 
+.theme-dark .message-group .mentioned .message-text{
+	background: linear-gradient(270deg,rgba(255,0,0,.2),rgba(255,255,0,.2),rgba(0,255,0,.2),rgba(0,0,255,.2));
+}
+
 .theme-dark .message-group .comment .markup .mention{
-    background-color: rgba(179, 224, 255, 0.1);
+    background-color: rgba(200, 200, 130, 0.1);
 }
 
 .theme-dark .message-group.is-local-bot-message{
@@ -1790,16 +1792,23 @@ span.discriminator{
 }
 
 .theme-dark .messages-wrapper .messages .divider:before{
-    background-color: #eceeef !important;
-    opacity: 0.05;
+    background: rgba(240,71,71,.8) !important;
+    height: 25px;
+    border-radius: 0px;
+	opacity: 0.8
 }
 
 .theme-dark .messages-wrapper .messages .divider.divider-red>span{
-    margin-left: calc(-100% + 242px);
-    /*margin-top: 19px;*/
-    background-color: rgba(240, 71, 71, 0.35) !important;
-    color: rgb(240, 71, 71);
-    z-index: 1 !important;
+    background-color: transparent !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    border-radius: 0px;
+    opacity: 1;
+    padding: 8px 15px;
+    line-height: 1px;
+    width: 100%;
+    text-align: center;
 }
 
 .emoji-picker .header{
@@ -1869,7 +1878,7 @@ span.channel-name{
 }
 
 .search-popout .search-query{
-    background-color: rgba(0, 0, 0, 0.42);
+    background-color: rgba(0, 0, 0, 0.5);
     border: 0;
 }
 
