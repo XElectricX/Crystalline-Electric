@@ -809,7 +809,9 @@ div.message-group-blocked{
 .settings .settings-inner .settings-panel{
     color: rgba(255, 255, 255, 0.9);
 }
-
+.guilds-wrapper .guilds .guild .guild-inner{
+	background: rgba(0, 0, 0, 0)
+}
 /* Old voice CSS element?
 #voice-connection .btn-group{
     border-radius: 0;
@@ -1079,6 +1081,9 @@ h3{
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+#friends .friends-table .friends-row .friends-column-guilds .avatar-small{
+    background-color: rgba(0, 0, 0 ,0);
+}
 .theme-dark #friends .friends-table .friends-row .friends-column-actions .friends-action{
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0.2);
