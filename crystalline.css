@@ -1,6 +1,6 @@
 /**********************************************************
  *           Crystalline CSS for BeautifulDiscord         *
- *                     Version 1.16.1                     *
+ *                     Version 1.18.5                     *
  *                                                        *
  *                   Created by SamuiNe                   *
  *               https://github.com/SamuiNe               *
@@ -56,13 +56,13 @@ body {
     /*font-family: 'Crimson Text', Whitney, Helvetica, Arial, sans-serif !important;*/
 }
 
-.markup pre code, code * {
+.markup pre code, .markup-2BOw-j pre code, code * {
     /*font-family: 'ＭＳ ゴシック', 'Ubuntu Mono', Consolas, Monaco, monospace !important;*/
     font-size: 13px !important;
     border-radius: 0 !important;
 }
 
-.markup pre, .markup code {
+.markup pre, .markup code, .markup-2BOw-j pre, .markup-2BOw-j code {
     /*font-family: 'ＭＳ ゴシック', 'Ubuntu Mono', Consolas, Monaco, monospace !important;*/
     font-size: 13px;
     background: rgba(10, 10, 10, 0.7) !important;
@@ -70,7 +70,7 @@ body {
     border-radius: 0 !important;
 }
 
-.markup pre code {
+.markup pre code, .markup-2BOw-j pre code {
     background: transparent !important;
 }
 
@@ -622,7 +622,7 @@ div.control-group .shortcut-recorder input[type=text]{
 .account .btn-group .btn:hover {
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.7) !important;
-    box-shadow: 0;
+    box-shadow: none;
     border: 0 !important;
 }
 
@@ -642,7 +642,7 @@ div.control-group .shortcut-recorder input[type=text]{
     color: rgba(255, 255, 255, 0.95);
 }
 
-.message-group .comment .markup{
+.message-group .comment .markup .markup-2BOw-j{
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1622,12 +1622,8 @@ input:disabled{
     color: rgba(255, 255, 255, 0.9);
 }
 
-.theme-dark .message-group .mentioned .message-text{
-	background: linear-gradient(270deg,rgba(255,0,0,.2),rgba(255,255,0,.2),rgba(0,255,0,.2),rgba(0,0,255,.2));
-}
-
-.theme-dark .message-group .comment .markup .mention{
-    background-color: rgba(200, 200, 130, 0.1);
+.theme-dark .message-group .comment .markup .mention .markup-2BOw-j{
+    background-color: rgba(179, 224, 255, 0.1);
 }
 
 .theme-dark .message-group.is-local-bot-message{
@@ -2643,6 +2639,7 @@ span.amount {
 }
 
 .theme-dark .message-2qRu38{
+    background-color: rgba(11, 11, 11, 0.8);
     border-radius: 0;
     box-shadow: none;
 }
@@ -2693,7 +2690,7 @@ span.amount {
 
 .theme-dark .elevationHigh-3A9Xbf{
     border-radius: 0;
-    background-color: rgba(42, 42, 42, 0.8);
+    background-color: rgba(22, 22, 22, 0.8);
 }
 
 .theme-dark .bubble-3we2di:before{
@@ -2878,11 +2875,11 @@ span.amount {
 }
 
 .checkboxWrapper-SkhIWG{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(22, 22, 22, 0.8);
 }
 
 .checkboxWrapper-SkhIWG:hover{
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(62, 62, 62, 0.8);
 }
 
 .box-mmYMsp{
@@ -2898,7 +2895,7 @@ span.amount {
 }
 
 .ui-call-avatar.video{
-    border-radius: none;
+    border-radius: 0;
 }
 
 .headerLive-2dDMvp{
@@ -3463,17 +3460,17 @@ span.discriminator{
 
 
 div.action-body {
-color: rgba(255, 255, 255, 0.3) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
 }
 
 div.action.create {
-color: rgba(255, 255, 255, 0.3) !important;
-background-color: rgba(255, 255, 255, 0.) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 div.action.join {
-color: rgba(255, 255, 255, 0.3) !important;
-background-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     box-shadow: none !important;
     border-radius: 0;
 }
@@ -3581,12 +3578,6 @@ background-color: rgba(255, 255, 255, 0.1) !important;
 .theme-dark .theme-light .calendarPicker-2yf6Ci .react-datepicker__day:hover,
 .theme-light .calendarPicker-2yf6Ci .react-datepicker__day:hover{
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-.theme-dark .embedInner-1-fpTo{
-    border-radius: 0;
-    border: None;
-    background: rgba(0, 0, 0, 0);
 }
 
 .embedPill-1Zntps{
@@ -3724,7 +3715,8 @@ background-color: rgba(255, 255, 255, 0.1) !important;
 
 .wrapper-O5i5-0{
     border-radius: 0;
-    background-color: rgba(22, 22, 22, 0.8);
+    /* TODO: This overlaps with other elements in friend invite screen, double check in the future */
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .form-deprecated .form-header,
@@ -3864,16 +3856,29 @@ input{
 }
 
 .theme-dark .select-2TCrqx .Select-menu-outer{
-    background-color: rgba(42, 42, 42, 0.8);
+    background-color: rgba(22, 22, 22, 0.8);
 }
+
+/*
+.theme-dark .select-2TCrqx .Select-option{
+    background-color: rgba(22, 22, 22, 0.8);
+}
+*/
 
 .theme-dark .select-2TCrqx .Select-option.is-selected{
-    background-color: rgba(52, 52, 52, 0.8);
+    background-color: rgba(62, 62, 62, 0.8);
 }
 
-.theme-dark .select-2TCrqx .Select-option.is-focused,
+.theme-dark .select-2TCrqx .Select-option.is-focused, .theme-dark .select-2TCrqx .Select-option:hover{
+    background: none;
+}
+
+.theme-dark .select-2TCrqx .Select-option.is-focused{
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
 .theme-dark .select-2TCrqx .Select-option:hover{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(42, 42, 42, 0.8);
 }
 
 
@@ -4018,7 +4023,7 @@ input{
 }
 
 .resultsGroup-r_nuzN{
-    background-color: rgba(32, 32, 32, 0.8);
+    background-color: rgba(22, 22, 22, 0.8);
 }
 
 .theme-dark .option-96V44q.selected-rZcOL-{
@@ -4199,7 +4204,7 @@ input{
 .theme-dark .embedInner-1-fpTo{
     border-radius: 0;
     border: none;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(10, 10, 10, 0.7);
 }
 
 .embedPill-1Zntps{
@@ -4265,4 +4270,806 @@ input{
 
 .theme-dark .body-3ND3kc{
     background-color: rgba(42, 42, 42, 0.8);
+}
+
+/* Discord Update 2018/06/22 */
+.theme-dark .activityFeed-28jde9{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card-7JP0BX{
+    border-radius: 0;
+}
+
+.theme-dark .card-7JP0BX{
+    background-color: rgba(10, 10, 10, 0.0);
+}
+
+.theme-dark .body-SKIE6r,
+.theme-dark .header-1RC2Wb{
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.splashArt-3yFzRe{
+    opacity: 0.88;
+}
+
+.dot-22bIa4{
+    border-radius: 0;
+}
+
+.news-2GDtLJ{
+    border-radius: 0;
+}
+
+/* Music Background color */
+.theme-dark .wrapperAudio-1jDe0Q{
+    background-color: rgba(10, 10, 10, 0.7);
+    /*border-radius: 0;*/
+    border: none;
+}
+
+/* Music bar thingy */
+.mediaBarWrapper-3D7r67, .mediaBarWrapper-3D7r67:after, .mediaBarWrapper-3D7r67:before{
+    background-color: rgba(88, 88, 88, 0.42);
+    /*border-radius: 0;*/
+}
+
+.buffer-26XPkd, .buffer-26XPkd:after, .buffer-26XPkd:before{
+    background-color: rgba(255, 255, 255, 0.5);
+    /*border-radius: 0;*/
+}
+/*
+.mediaBarProgress-1xaPtl, .mediaBarProgress-1xaPtl:after, .mediaBarProgress-1xaPtl:before{
+    border-radius: 0;
+}*/
+
+/* Music bar tooltip */
+
+.bubble-3qRl2J{
+    border-radius: 0;
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.bubble-3qRl2J:before{
+    border-top-color: rgba(197, 207, 237, 1); /*TODO: Copy the triangle tooltip thing from other stuff*/
+}
+
+.mediaBarPreview-1jfyFs, .mediaBarPreview-1jfyFs:after, .mediaBarPreview-1jfyFs:before{
+    background-color: rgba(142, 161, 255, 0.8);
+}
+
+.wrapper-2TxpI8{
+    border-radius: 0;
+}
+
+
+/* Upload bar thingy */
+
+.progress-3Rbvu0{
+    background-color: rgba(88, 88, 88, 0.8) !important;
+}
+
+.progressBar-3u8FBM.small-1CUeBa{
+    background-color: rgba(0, 255, 133, 0.7) !important;
+    border-radius: 0 !important;
+}
+
+.small-1CUeBa{
+    border-radius: 0;
+}
+
+/*Game invite gradient fix*/
+.coverImageWrapper-22d5LB{
+    border-radius: 0;
+}
+
+/*Mini window pop-up at each message line thing */
+.theme-dark .container-1rPqdX{
+    border-radius: 0;
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+/* Discord update 2018/07/28 */
+
+.isMentionedCozy-3isp7y{
+    border-radius: 0;
+}
+
+.isMentionedCozy-3isp7y:after{
+    border-radius: 0;
+}
+
+.theme-dark .messageGroupWrapper-o-Zw7G{
+    background-color: rgba(10, 10, 10, 0.7);
+    border-radius: 0;
+    border: none;
+}
+
+.theme-dark .jumpButton-3DTcS_{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.theme-dark .messageGroupWrapper-o-Zw7G:hover .actionButtons-1sUUug{
+    -webkit-box-shadow: none;
+}
+
+.theme-dark .container-3cGP6G{
+    border-radius: 0;
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+/* Discord update 2018/08/01 */
+.theme-dark .guildsWrapper-5TJh6A{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.search-bar-light .searchBarInner-1_Tg2R{
+    background-color: rgba(0, 0, 0, 0.42);
+    border-radius: 0 !important;
+}
+
+/* Discord update 2018/08/04 */
+.theme-dark .chat-3bRxxu,
+.theme-dark .chat-3bRxxu form,
+.theme-dark .content-yTz4x3{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .messagesWrapper-3lZDfY{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.newMessagesBar-mujexs{
+    background-color: rgba(114,137,218, 0.6);
+    border-radius: 0;
+}
+
+/*TODO: Delete below if stuff gets messed up again for this part*/
+
+.theme-dark .divider-3gKybi.dividerRed-MKoLlr>span{
+    margin-left: calc(-100% + 242px);
+    margin-top: 22px;
+    background-color: rgba(240, 71, 71, 0.35) !important;
+    color: rgb(240, 71, 71);
+    z-index: 1 !important;
+    border-radius: 0;
+}
+
+.theme-dark .divider-3gKybi.dividerRed-MKoLlr>div{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .divider-3gKybi{
+    margin-right: 20px;
+}
+
+.theme-dark .divider-3gKybi:before{
+    /*margin-top: -20px;*/
+    background-color: hsla(0,0%,100%,.06);
+}
+
+
+/* Why does this doesn't work */
+
+/*
+.containerCozy-jafyvG .divider-32i8lo{
+    border: 0 solid rgba(0, 0, 0, 0);
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+    margin: 0 20px 0 20px;
+}*/
+
+/*.containerCozy-jafyvG{
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}*/
+
+/* Oh wait, its this one */
+
+.containerCozy-jafyvG{
+    padding-top: 20px;
+}
+
+.theme-dark .divider-3gKybi span{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .divider-3gKybi:not(.red-1YQ4s7) span{
+
+    /* TODO: Fix text on this */
+}
+
+.theme-dark .divider-3gKybi:not(.red-1YQ4s7) div{
+    /*margin-top: -40px !important;*/
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.messageGroupBlocked-3wrQQX{
+    border-bottom: 0px;
+}
+
+.theme-dark .messageGroupBlocked-3wrQQX .messageGroupBlockedBtn-1PBBh-{
+
+    display: none;
+}
+
+/*
+.messageGroupBlocked-3wrQQX:before{
+    border: 1px solid hsla(0,0%,100%,.06);
+    display: inline;
+}
+*/
+
+/* End of TODO 4398,3 */
+
+.theme-dark .jumpToPresentBar-9P20AM,
+.theme-dark .jumpToPresentBar-9P20AM:hover{
+    background-color: rgba(22, 22, 22, 0.8);
+    border-radius: 0;
+}
+
+/* Discord login screen */
+.authBox-hW6HRx{
+    border-radius: 0;
+    box-shadow: none;
+    background-color: rgba(22, 22, 22, 0.8);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subTitle-3TUjmF,
+.theme-dark .input-cIJ7To{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* If you're into circles and different colors for unread servers
+   Might add an optional folder for these kind of stuff
+
+.theme-dark .guild-1EfMGQ.unread-qLkInr:before{
+    background-color: rgba(197, 207, 237, 1);
+    margin: -25px 0 0 55px;
+    z-index: 42;
+}
+
+.guild-1EfMGQ.selected-ML3OIq:before{
+    margin: -20px 0 0 0 !important;
+    -webkit-transition: none;
+    transition: none;
+}
+*/
+
+/* Discord update 2018/08/14 */
+
+.theme-dark .container-2Thooq, .theme-light .container-2Thooq{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Other fixes */
+
+.channelNotices-41mJbj .channelNotice-1-XFjC.invite-OjTXrW,
+.channelNotices-41mJbj .channelNotice-1-XFjC.quickswitcher-35bYg4{
+    background: rgba(22, 22, 22, 0.42) url(/assets/8fdb69b7684b8e1ecb3fdde909daca41.svg) no-repeat center 35px;
+    box-shadow: none;
+}
+
+.channelNotices-41mJbj .channelNotice-1-XFjC .message-3SOT5P .btn-11C5_u{
+    border: none;
+    border-radius: 0;
+    background: rgba(22, 22, 22, 0.8);
+}
+
+.channelNotices-41mJbj .channelNotice-1-XFjC .message-3SOT5P .btn-11C5_u:hover{
+    border: none;
+    border-radius: 0;
+    background: rgba(22, 22, 22, 0.42);
+}
+
+.theme-dark .hasMore-3e72_v button:hover{
+    background-color: rgba(22, 22, 22, 0.42);
+    box-shadow: none;
+}
+
+.theme-dark .hasMore-3e72_v button{
+    background-color: rgba(22, 22, 22, 0.8);
+    border: none;
+    border-radius: 0;
+}
+
+/* Disord update September 2018 */
+
+/* Version 1.17.8 > 1.18.0 */
+
+/* Friend List background Selected + Hover */
+
+.channel-2QD9_O a{
+    border-radius: 0;
+}
+
+.channel-2QD9_O:hover a{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.channel-2QD9_O.selected-1HYmZZ a{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Notice bar background opacity and border radius */
+
+.notice-2FJMB4{
+    border-radius: 0;
+}
+
+.noticeFacebook-3equ5g{
+    background-color: rgba(53, 80, 137, 0.8);
+}
+
+.noticeDanger-7u-yT9 {
+    background-color: rgba(240, 71, 71, 0.8);
+}
+/* Voice chat background fix */
+
+.theme-dark .wrapper-29NfPK{
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: solid rgba(255, 255, 255, 0.1) 1px;
+}
+
+/* Voice chat buttons background and border radius */
+
+.theme-dark .wrapper-29NfPK.minimum-2d6zH6 .actions-2vadYq .center-1Vp33r{
+    background-color: rgba(22, 22, 22, 0.8);
+    border: none;
+    border-radius: 0;
+}
+
+/* Voice video chat buttons background and border radius */
+
+.wrapper-29NfPK.fullScreen-3DKbL8 .actions-2vadYq .center-1Vp33r,
+.wrapper-29NfPK.fullScreen-3DKbL8 .actions-2vadYq .side-kO0bwV,
+.wrapper-29NfPK.noChat-2qlG4B .center-1Vp33r,
+.wrapper-29NfPK.noChat-2qlG4B .side-kO0bwV,
+.wrapper-29NfPK.normal-2GSW0u .center-1Vp33r,
+.wrapper-29NfPK.normal-2GSW0u .side-kO0bwV{
+    background-color: rgba(22, 22, 22, 0.8);
+    border: none;
+    border-radius: 0;
+}
+
+/* Voice video chat background fix */
+
+.video-1kutKI{
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+.theme-dark .pictureInPictureVideo-20ZvXn{
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.overlay-1NmNEg{
+    border: none;
+    box-shadow: none;
+}
+
+
+/* Fix for that random shadow below search bar */
+
+.searchBar-6Kv8R2{
+    box-shadow: none;
+}
+
+/* Local Bot background fix */
+
+.theme-dark .isLocalBot-38G0P0{
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+/* Discord update 2018/10/5 and previous updates */
+/* Version 1.18.0 > 1.18.1 */
+/* ｓｌｏｗ　ｍｏｄｅ text color */
+
+.cooldownWrapper-3joyFc{
+    color: rgb(255, 190, 120) !important;
+}
+
+/* Fix 'New Messages' margin and width */
+.theme-dark .divider-3gKybi.dividerRed-MKoLlr>span{
+    margin-top: 1px;
+    margin-bottom: -20px;
+}
+
+.theme-dark .divider-3gKybi.dividerRed-MKoLlr{
+    width: 180px;
+}
+
+/* Fix border colors for 'hidden' dividers */
+
+.containerCozy-jafyvG .divider-32i8lo{
+    border-color: hsla(0,0%,100%,.04);
+}
+
+/* Fix margins for date dividers */
+
+.theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI{
+
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: -11px;
+    margin-bottom: -8px;
+}
+
+.theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:after, .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:before{
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Make blocked messages divider hidden */
+
+.divider-3zi9LO+.messageGroupBlocked-JqfeE2,
+.messageGroupBlocked-3wrQQX{
+    border: none;
+
+}
+
+/* Version 1.18.1 > 1.18.2 */
+
+/* Discord Nitro page fix */
+.theme-dark .paymentRow-2e7VM6{
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .paymentPane-3bwJ6A,
+.theme-dark .paginator-166-09,
+.theme-dark .paymentRow-2e7VM6{
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.theme-dark .paymentRow-2e7VM6:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .expandedInfo-3kfShd{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.paymentPane-3bwJ6A{
+    border-radius: 0;
+}
+
+.indicator-2Qs3-E{
+    border-radius: 0;
+}
+
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:active,
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Discord Hypesquad border radius fix */
+
+/* TODO: Youtube preview border radius to 0 */
+
+.membershipDialog-rVL-t_,
+.ytp-cued-thumbnail-overlay-duration{
+    border-radius: 0;
+}
+
+/* Fix inconstencies at Help */
+
+.need-help-modal.form.deprecated .header,
+.need-help-modal.form.deprecated .footer{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.need-help-modal.form.deprecated .header input[type=text]{
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.42);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Fixed Invite friend window. Refer to git history for changes. */
+
+/* Fix certain text box's background */
+/* TODO: Fix the dropdown menu background, too light and not enough opacity */
+.theme-dark .select-2TCrqx .Select-control{
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+/* Change unsaved roles confirmation window background color */
+
+.theme-dark .elevationHigh-1PneE4{
+    background-color: rgba(22, 22, 22, 0.8) !important;
+}
+
+/* Version 1.18.2 > 1.18.3 */
+
+/* Fix reaction border radius */
+/* Adjusted reaction text color and background color */
+.theme-dark .reaction-1ELvT8{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .reactionCount-2ddRoS{
+    color: rgba(255, 255, 255, 0.42);
+}
+
+/* Video preview border radius fix */
+
+.videoWrapper-3YdgHH{
+    border-radius: 0;
+}
+
+/* Search fix */
+
+/* Fix the weird gradiant thing */
+
+.theme-dark .option-96V44q:after,
+.theme-dark .option-96V44q.selected-rZcOL-:after{
+    background: none;
+}
+
+/* Fix the background for search pop-up window */
+
+.theme-dark .container-3ayLPN{
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+.resultsGroup-r_nuzN{
+    margin-top: 0;
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+.container-3ayLPN{
+    border-radius: 0;
+}
+
+/* Delet the random box shadow for search pop-up window */
+
+.theme-dark .elevationBorderHigh-2WYJ09{
+    box-shadow: none;
+}
+
+/* Fix the close button for settings menu */
+
+.closeButton-1tv5uR{
+    border-radius: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Fix guild wrapper border radius */
+
+.guildsWrapper-5TJh6A{
+    border-radius: 0;
+}
+
+/* Fix gif embed border radius */
+
+.video-8eMOth{
+    border-radius: 0;
+}
+
+.embedImage-2W1cML,
+.embedThumbnail-2Y84-K, .embedVideo-3nf0O9{
+    border-radius: 0;
+}
+
+/* Fix the background for server add button */
+
+.theme-dark .guildsAdd-21_IdK{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Fix color picker border radius */
+
+.colorPickerSwatch-5GX3Ve{
+    border-radius: 0;
+}
+
+/* Fix role add pop-up border radius */
+
+#autocomplete-popout .autocomplete-shadow {
+    border-radius: 0;
+}
+
+.popout-3sVMXz header,
+.popout-3sVMXz section{
+    border-radius: 0 0 0 0;
+}
+
+/* Fix Display role menu pop-up */
+
+.theme-dark .elevationBorderLow-2qgTRQ{
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.theme-dark .popoutList-T9CKZQ{
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+.theme-dark .selectableItem-1MP3MQ{
+    border-radius: 0;
+}
+
+.theme-dark .selectableItem-1MP3MQ:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Version 1.18.3 > 1.18.4 */
+
+/* .theme-dark .message-2qRu38 changed, refer to git for details */
+/* Fixed pin message background color */
+
+.theme-dark .lookFilled-1h1y05.select-1Pkeg4,
+.theme-dark .popout-2sKjHu{
+    background-color: rgba(22, 22, 22, 0.8);
+    border-radius: 0;
+}
+
+.theme-dark .lookFilled-1h1y05.select-1Pkeg4{
+    border: none;
+}
+
+/* Adjusted dropdown option for Discord Nitro purchase window */
+
+.theme-dark .optionActive-KkAdqq{
+    background-color: rgba(62, 62, 62, 0.8);
+}
+
+.theme-dark .optionNormal-12VR9V:hover{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+/* .checkboxWrapper-SkhIWG:hover and .checkboxWrapper-SkhIWG changed, refer to git for details */
+/* Adjusted background color for Discord Store Terms of Service box */
+
+/* Adjust border radius for Discord Nitro price */
+
+.price-2IU94K{
+    border-radius: 0;
+}
+
+/* .theme-dark .select-2TCrqx changed, refer to git for details */
+/* Adjusted background colors for dropdown menus for consistency */
+
+/* Forgot to document which one is this */
+
+.theme-dark .focused-2bY0OD{
+    background-color: rgba(11, 11, 11, 0.8);
+    border: none;
+}
+
+/* Adjusted .theme-dark .container-3ayLPN, refer to git for details */
+/* Fix date picker background color */
+
+/* Version 1.18.4 > 1.18.5 */
+
+/* Member list background-color adjustment*/
+/* TODO: Look for existing CSS element */
+
+.theme-dark .members-1998pB, .channels-Ie2l6A{
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+/* Discord Nitro Classic banner background color and border radius fix */
+
+.theme-dark .tier1Banner-1B_WXY{
+    background-color: rgba(22, 22, 22, 0.8);
+    border-radius: 0;
+}
+
+/* Discord Nitro thumbnail border radius fix */
+
+.thumbnail-NKY26f{
+    border-radius: 0;
+}
+
+/* Discord Store page background color fix */
+
+.theme-dark .applicationStore-1pNvnv{
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+/* TODO: Update existing CSS element */
+/* Adjust the background color for input field */
+
+.theme-dark .input-cIJ7To{
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.theme-dark .searchBox-3Y2Vi7{
+    background-color: rgba(0, 0, 0, 0.42);
+    border-radius: 0;
+}
+
+/* Fix Game information and thumbnail border radius */
+
+.theme-dark .tileWrapper-2khh-w{
+    background-color: rgba(22, 22, 22, 0.8);
+    border-radius: 0;
+}
+
+.theme-dark .tileWrapper-2khh-w:hover{
+    background-color: rgba(42, 42, 42, 0.8);
+}
+
+/* Fix the border radius for Discord Nitro purchase window again */
+
+.price-1rEl-z{
+    border-radius: 0;
+}
+
+/* Discord Library background fix */
+
+.theme-dark .gameLibrary-TTDw4Y{
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+/* Discord Library header background color fix */
+
+.theme-dark .gameUpdates-2GPqBU{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-dark .header-39GIC8{
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Discord Library game information background fix */
+/* Removed box shadow for game information */
+.rowWrapper-2fB6P0{
+    border-radius: 0;
+}
+
+.theme-dark .rowWrapperActive-2L7i9f{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+/* Adjust the text color for Discord Library game information */
+.theme-dark .icon-1IKq3C, .theme-dark .textCell-1aBIUP{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Discord Library download bar fix */
+
+.small-4dgL9e,
+.xsmall-2LuBKD{
+    border-radius: 0;
+}
+
+.theme-dark .progressCellText-3avmMz{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Discord settings background color fix */
+
+.theme-dark .standardSidebarView-3F1I7i{
+    background: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .sidebarRegion-VFTUkN{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .contentRegion-3nDuYy{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Fix emoji margins */
+
+.emoji.jumboable{
+    margin: 0;
 }
