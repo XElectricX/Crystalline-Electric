@@ -4428,8 +4428,6 @@ input{
 /*TODO: Delete below if stuff gets messed up again for this part*/
 
 .theme-dark .divider-3gKybi.dividerRed-MKoLlr>span{
-    margin-left: calc(-100% + 242px);
-    margin-top: 22px;
     background-color: rgba(240, 71, 71, 0.35) !important;
     color: rgb(240, 71, 71);
     z-index: 1 !important;
@@ -4440,12 +4438,7 @@ input{
     background-color: rgba(0, 0, 0, 0);
 }
 
-.theme-dark .divider-3gKybi{
-    margin-right: 20px;
-}
-
 .theme-dark .divider-3gKybi:before{
-    /*margin-top: -20px;*/
     background-color: hsla(0,0%,100%,.06);
 }
 
@@ -4676,13 +4669,9 @@ input{
 }
 
 /* Fix 'New Messages' margin and width */
-.theme-dark .divider-3gKybi.dividerRed-MKoLlr>span{
-    margin-top: 1px;
-    margin-bottom: -20px;
-}
 
 .theme-dark .divider-3gKybi.dividerRed-MKoLlr{
-    width: 180px;
+    width: inherit;
 }
 
 /* Fix border colors for 'hidden' dividers */
@@ -4696,8 +4685,6 @@ input{
 .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI{
 
     color: rgba(255, 255, 255, 0.5);
-    margin-top: -11px;
-    margin-bottom: -8px;
 }
 
 .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:after, .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:before{
