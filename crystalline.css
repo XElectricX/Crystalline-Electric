@@ -26,7 +26,17 @@ body {
     /* The picture source is from 书童hiroco at the link (thanks shinji257!):
        https://www.pixiv.net/member_illust.php?mode=medium&illust_id=61734227
        */
-    background: #fff url(https://lh6.googleusercontent.com/-b8sMuGsueWw/VCdhUhtADfI/AAAAAAAAAKg/T8c-uxeiyPw/w1920-h1080/301609.jpg);
+
+    /*Mooooore options! Delete * and / around the background you want. Add * and / to the default background to turn it off.*/
+
+    /*Senpai Daji skin*/
+    background: #fff url(https://cdn.discordapp.com/attachments/506619807097946112/506620987056455680/Senpai-Daji-3840x2160.jpg);
+
+    /*SAO, Kirito and Asuna*/
+    /*background: #fff url(https://cdn.discordapp.com/attachments/506619807097946112/506620001000882226/SwordArtOnline.png);*/
+
+    /*Fairy Tail Natsu*/
+    /*background: #fff url(https://cdn.discordapp.com/attachments/506619807097946112/506620008093319198/Natsu.jpg);*/
 
     /* It is recommended to set the background-size width to match your monitor's or discord window's width plus 1px.
        If the background picture is blurry, please use a bigger sized background picture. */
