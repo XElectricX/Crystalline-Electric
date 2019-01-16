@@ -1,6 +1,6 @@
 /**********************************************************
  *           Crystalline CSS for BeautifulDiscord         *
- *                     Version 1.18.5                     *
+ *                     Version 1.19.4                     *
  *                                                        *
  *                   Created by SamuiNe                   *
  *               https://github.com/SamuiNe               *
@@ -11,13 +11,10 @@
  *               https://discord.gg/An6Yka5               *
  *                  Thank you in advance!                 *
  *                                                        *
- *       MIT License, Copyright SamuiNe 2016 ~ 2017       *
+ *       MIT License, Copyright SamuiNe 2016 ~ 2019       *
  **********************************************************/
 
 /* Caution! This theme only works for dark theme for now. It will not work properly at light theme. */
-
-/* This import is not needed unless if you want to use Crimson Text font. */
-/*@import 'https://fonts.googleapis.com/css?family=Crimson+Text';*/
 
 body {
     -webkit-transition: background 3s ease-in-out;
@@ -43,7 +40,8 @@ body {
     background-size: cover;
 }
 
-.app, .connecting {
+.app, .connecting ,
+.appMount-3lHmkl{
     /* You can adjust the background brightness by reducing the fourth value of below.
        0.0 for no dark background, 1.0 for full darkness.
 
@@ -63,7 +61,7 @@ body {
 */
 
 *:not(code) {
-    /*font-family: 'Crimson Text', Whitney, Helvetica, Arial, sans-serif !important;*/
+    /*font-family: Whitney, Helvetica, Arial, sans-serif !important;*/
 }
 
 .markup pre code, .markup-2BOw-j pre code, code * {
@@ -2602,7 +2600,7 @@ span.amount {
 }
 
 .theme-dark .cardPrimary-1Hv-to{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.42);
 }
 
 .buttonOutlined-38aLSW{
@@ -3664,6 +3662,7 @@ div.action.join {
 
 .video-1FfuMD{
     background: rgba(0, 0, 0, 0);
+    height: 80%;
 }
 
 .theme-dark .private-channel-call.minimum .private-channel-call-actions .center{
@@ -3851,7 +3850,7 @@ input{
 }
 
 .theme-dark .cardPrimaryOutline-29Ujqw{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -3974,7 +3973,7 @@ input{
 .theme-dark .userSettingsVoice-iwdUCU .previewOverlay-2O7_KC{
     border-radius: 0;
     border: none;
-    background-color: rgba(42, 42, 42, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .userSettingsVoice-iwdUCU .media-engine-video{
@@ -4615,7 +4614,7 @@ input{
 /* Voice chat background fix */
 
 .theme-dark .wrapper-29NfPK{
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.42);
     border-bottom: solid rgba(255, 255, 255, 0.1) 1px;
 }
 
@@ -4961,7 +4960,7 @@ input{
 /* Discord Nitro Classic banner background color and border radius fix */
 
 .theme-dark .tier1Banner-1B_WXY{
-    background-color: rgba(22, 22, 22, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0;
 }
 
@@ -5071,11 +5070,154 @@ input{
     margin: 0;
 }
 
-.theme-dark .guild-1EfMGQ .guildInner-3DSoA4 {
-    background: transparent;
+/* Discord update 2018/12/19 */
+
+/* I forgot which fixes are these */
+
+.applicationTile-1Goy1W{
+    border-radius: 0;
+}
+
+.theme-dark .applicationTile-1Goy1W{
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+.theme-dark .applicationTile-1Goy1W:hover{
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+/* Discord update 2018/01/19 and prior */
+
+/* Discord gift window, selection border and background color fix */
+
+.option-1l2vXE{
+    border-radius: 0;
+}
+
+.theme-dark .option-1l2vXE{
+    background-color: rgba(11, 11, 11, 0.8);
+}
+
+.annualDiscount-1VxngV{
+    border-radius: 0;
+}
+
+/* Gift Inventory background color fix */
+
+.theme-dark .root-1BQpZw{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Discord Nitro purchase page banner border fix */
+.banner-3Kac2g{
+    border-radius: 0;
+}
+
+/* Discord Nitro purchase page below banner background fix */
+.theme-dark .container-2Zlzt0{
+    background-color: rgba(22, 22, 22, 0.42);
+    border-radius: 0;
+}
+
+/* Overlay setting - Overlay Notification position preview border radius fix */
+
+.wrapper-3jrx9n{
+    border-radius: 0;
+}
+
+.option-n0icdO{
+    border-radius: 0;
+}
+
+/* Game Activity now playing / inactive border radius fix */
+.notDetected-33MY4s, .nowPlaying-284llR{
+    border-radius: 0;
+}
+
+/* Discord update 2019/1/12 */
+
+/* Fix Friends list background color */
+
+.theme-dark .container-3gCOGc{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Fix Friends list button background color and border radius */
+
+.theme-dark .friendsTable-133bsv .friendsRow-2yicud .friendsColumnActions-1LT3_M .friendsAction-__WNE9{
+    border-radius: 0;
+    background-color: rgba(22, 22, 22, 0.8);
+}
+
+/* Fix Search bar border radius and background color */
+
+.theme-dark .search-2oPWTC .searchBar-3dMhjb{
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+/* Fix Search result's background colors, border radius, and other stuff */
+
+.theme-dark .searchResultsWrap-2DKFzt{
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+.theme-dark .searchHeader-1l-wpR{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .searchResult-3pzFAB .searchResultMessage-2VxO12.hit-NLlWXA{
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background-color: rgba(11, 11, 11, 0.8);
+}
+
+.theme-dark .searchResult-3pzFAB:before,
+.theme-dark .searchResult-3pzFAB:after{
+    background-image: none;
+}
+
+.theme-dark .searchResult-3pzFAB{
+    background-color: rgba(11, 11, 11, 0.42);
+}
+
+.theme-dark .channelSeparator-1X1FuH .channelName-1QajIf{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .searchResult-3pzFAB.expanded-v2Szsz{
+    border-radius: 0;
+    border: none;
+}
+
+.theme-dark .searchResult-3pzFAB.expanded-v2Szsz .searchResultMessage-2VxO12.hit-NLlWXA{
+    border: none;
+    background-color: rgba(11, 11, 11, 0.8);
+}
+
+.searchBar-2_Yu-C.searchBarLight-1NxoDG{
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+}
+
+.searchBar-2_Yu-C.searchBarLight-1NxoDG .searchBarInner-1_Tg2R{
+    background-color: rgba(0, 0, 0, 0.42);
+    border-radius: 0 !important;
+    border: none;
+}
+
+.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-track-piece{
+    border: none;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0);
+}
+
+.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-thumb{
+    border-color: rgba(66, 66, 66, 0.42);
+    background-color: rgba(22, 22, 22, 0.42);
+
 }
 
 /*Rainbow Mentions*/
 .theme-dark .isMentioned-N-h9aa {
     background-image: linear-gradient(to right, rgba(0, 150, 0, 0.2),rgba(255, 255, 0, 0.2),rgba(255, 0, 0, 0.2),rgba(0, 0, 255, 0.2));
-}
