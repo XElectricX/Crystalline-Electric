@@ -5743,8 +5743,8 @@ input{
 .searchOption-8nCYo-{
     border-radius: 0;
 }
-}
 
 /*Rainbow Mentions*/
 .theme-dark .isMentioned-N-h9aa {
     background-image: linear-gradient(to right, rgba(0, 150, 0, 0.2),rgba(255, 255, 0, 0.2),rgba(255, 0, 0, 0.2),rgba(0, 0, 255, 0.2));
+}
