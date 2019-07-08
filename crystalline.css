@@ -23,14 +23,21 @@ body {
     /* The picture source is from 书童hiroco at the link (thanks shinji257!):
        https://www.pixiv.net/member_illust.php?mode=medium&illust_id=61734227
        */
-    background: #fff url(https://cdn.discordapp.com/attachments/289712508258746368/470350501779603466/patchouli_knowledge_touhou_drawn_by_shutong_hiroko__1f0f5eb005499f1887ac942a337dfa60.png);
 
-    /* Just in case adjusting the position is necessary (x% y%)*/
-    background-position: 50% 0;
+    /*Mooooore options! Delete * and / around the background you want. Add * and / to the default background to turn it off.*/
+
+    /*Senpai Daji skin*/
+    background: #fff url(https://cdn.discordapp.com/attachments/506619807097946112/506620987056455680/Senpai-Daji-3840x2160.jpg);
+
+    /*SAO, Kirito and Asuna*/
+    /*background: #fff url(https://cdn.discordapp.com/attachments/506619807097946112/506620001000882226/SwordArtOnline.png);*/
+
+    /*Fairy Tail Natsu*/
+    /*background: #fff url(https://cdn.discordapp.com/attachments/506619807097946112/506620008093319198/Natsu.jpg);*/
 
     /* It is recommended to set the background-size width to match your monitor's or discord window's width plus 1px.
        If the background picture is blurry, please use a bigger sized background picture. */
-    background-size: 1921px auto;
+    background-size: cover;
 }
 
 .app, .connecting ,
@@ -231,6 +238,7 @@ div.theme-dark.context-menu.item.item-subMenu{
 }
 
 .mention{
+	color: rgba(0, 160, 40, 1);
     background-color: rgba(179, 224, 255, 0.22);
 }
 
@@ -809,7 +817,9 @@ div.message-group-blocked{
 .settings .settings-inner .settings-panel{
     color: rgba(255, 255, 255, 0.9);
 }
-
+.guilds-wrapper .guilds .guild .guild-inner{
+	background: rgba(0, 0, 0, 0)
+}
 /* Old voice CSS element?
 #voice-connection .btn-group{
     border-radius: 0;
@@ -1079,6 +1089,9 @@ h3{
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+#friends .friends-table .friends-row .friends-column-guilds .avatar-small{
+    background-color: rgba(0, 0, 0 ,0);
+}
 .theme-dark #friends .friends-table .friends-row .friends-column-actions .friends-action{
     border-radius: 0;
     background-color: rgba(255, 255, 255, 0.2);
@@ -1788,16 +1801,23 @@ span.discriminator{
 }
 
 .theme-dark .messages-wrapper .messages .divider:before{
-    background-color: #eceeef !important;
-    opacity: 0.05;
+    background: rgba(240,71,71,.8) !important;
+    height: 25px;
+    border-radius: 0px;
+	opacity: 0.8
 }
 
 .theme-dark .messages-wrapper .messages .divider.divider-red>span{
-    margin-left: calc(-100% + 242px);
-    /*margin-top: 19px;*/
-    background-color: rgba(240, 71, 71, 0.35) !important;
-    color: rgb(240, 71, 71);
-    z-index: 1 !important;
+    background-color: transparent !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    border-radius: 0px;
+    opacity: 1;
+    padding: 8px 15px;
+    line-height: 1px;
+    width: 100%;
+    text-align: center;
 }
 
 .emoji-picker .header{
@@ -1867,7 +1887,7 @@ span.channel-name{
 }
 
 .search-popout .search-query{
-    background-color: rgba(0, 0, 0, 0.42);
+    background-color: rgba(0, 0, 0, 0.5);
     border: 0;
 }
 
@@ -4413,8 +4433,6 @@ input{
 /*TODO: Delete below if stuff gets messed up again for this part*/
 
 .theme-dark .divider-3gKybi.dividerRed-MKoLlr>span{
-    margin-left: calc(-100% + 242px);
-    margin-top: 22px;
     background-color: rgba(240, 71, 71, 0.35) !important;
     color: rgb(240, 71, 71);
     z-index: 1 !important;
@@ -4425,12 +4443,7 @@ input{
     background-color: rgba(0, 0, 0, 0);
 }
 
-.theme-dark .divider-3gKybi{
-    margin-right: 20px;
-}
-
 .theme-dark .divider-3gKybi:before{
-    /*margin-top: -20px;*/
     background-color: hsla(0,0%,100%,.06);
 }
 
@@ -4661,13 +4674,9 @@ input{
 }
 
 /* Fix 'New Messages' margin and width */
-.theme-dark .divider-3gKybi.dividerRed-MKoLlr>span{
-    margin-top: 1px;
-    margin-bottom: -20px;
-}
 
 .theme-dark .divider-3gKybi.dividerRed-MKoLlr{
-    width: 180px;
+    width: inherit;
 }
 
 /* Fix border colors for 'hidden' dividers */
@@ -4681,8 +4690,6 @@ input{
 .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI{
 
     color: rgba(255, 255, 255, 0.5);
-    margin-top: -11px;
-    margin-bottom: -8px;
 }
 
 .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:after, .theme-dark .divider-3gKybi:not(.dividerRed-MKoLlr) .dividerContent-2L12VI:before{
@@ -5736,3 +5743,8 @@ input{
 .searchOption-8nCYo-{
     border-radius: 0;
 }
+}
+
+/*Rainbow Mentions*/
+.theme-dark .isMentioned-N-h9aa {
+    background-image: linear-gradient(to right, rgba(0, 150, 0, 0.2),rgba(255, 255, 0, 0.2),rgba(255, 0, 0, 0.2),rgba(0, 0, 255, 0.2));
